@@ -31,7 +31,7 @@ const Home = (): JSX.Element => {
   }, {} as CartItemsAmount);
 
   useEffect(() => {
-    (async function loadProducts() {
+    (async () => {
       api.get<Product[]>("/products").then((response) => {
         setProducts(
           response.data.map((product) => ({
