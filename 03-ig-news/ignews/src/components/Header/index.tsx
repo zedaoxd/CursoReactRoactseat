@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import SignInButton from "./SignInButton";
 import styles from "./styles.module.scss";
 
 const Header = () => {
@@ -13,6 +14,7 @@ const Header = () => {
           </a>
           <a href="">Posts</a>
         </nav>
+        <SignInButton />
       </div>
     </header>
   );
