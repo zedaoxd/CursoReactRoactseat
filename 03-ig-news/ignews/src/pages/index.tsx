@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { stripe } from "../components/services/stripe";
 import SubscribeButton from "../components/SubscribeButton";
 import styles from "./home.module.scss";
@@ -30,7 +31,9 @@ export default function Home({ product }: HomeProps) {
           </p>
           <SubscribeButton priceId={product.priceId} />
         </section>
-        <img src="/images/avatar.svg" alt="girl coding" />
+        <div className={styles.imageContainer}>
+          <Image src="/images/avatar.svg" alt="girl coding" fill />
+        </div>
       </main>
     </>
   );
